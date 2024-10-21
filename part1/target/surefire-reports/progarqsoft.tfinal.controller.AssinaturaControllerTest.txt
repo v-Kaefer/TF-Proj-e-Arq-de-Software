@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: progarqsoft.tfinal.controller.AssinaturaControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 77.272 s <<< FAILURE! - in progarqsoft.tfinal.controller.AssinaturaControllerTest
+criarAssinaturaTest  Time elapsed: 0.003 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration': Injection of autowired dependencies failed; nested exception is java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on progarqsoft.tfinal.config.TestSecurityConfig$$EnhancerBySpringCGLIB$$7516bfd6@587f6634, so it cannot be used on progarqsoft.tfinal.config.SecurityConfig$$EnhancerBySpringCGLIB$$7eae3964@1107c465 too.
+Caused by: java.lang.IllegalStateException: @Order on WebSecurityConfigurers must be unique. Order of 100 was already used on progarqsoft.tfinal.config.TestSecurityConfig$$EnhancerBySpringCGLIB$$7516bfd6@587f6634, so it cannot be used on progarqsoft.tfinal.config.SecurityConfig$$EnhancerBySpringCGLIB$$7eae3964@1107c465 too.
+
