@@ -1,5 +1,8 @@
 package progarqsoft.tfinal.model;
 
+import java.time.LocalDate;
+import javax.persistence.*;
+
 @Entity
 public class Assinatura {
     @Id

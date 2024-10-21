@@ -1,5 +1,7 @@
 package progarqsoft.tfinal.model;
 
+import javax.persistence.*;
+
 @Entity
 public class Aplicativo {
     @Id

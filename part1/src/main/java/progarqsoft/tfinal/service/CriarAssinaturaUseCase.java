@@ -1,11 +1,15 @@
 package progarqsoft.tfinal.service;
 
-import progarqsoft.tfinal.model.Aplicativo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import progarqsoft.tfinal.model.Assinatura;
 import progarqsoft.tfinal.model.Cliente;
-import progarqsoft.tfinal.repository.AplicativoRepository;
+import progarqsoft.tfinal.model.Aplicativo;
 import progarqsoft.tfinal.repository.AssinaturaRepository;
 import progarqsoft.tfinal.repository.ClienteRepository;
+import progarqsoft.tfinal.repository.AplicativoRepository;
+
+import java.time.LocalDate;
 
 @Service
 public class CriarAssinaturaUseCase {
@@ -13,6 +17,7 @@ public class CriarAssinaturaUseCase {
     private final ClienteRepository clienteRepository;
     private final AplicativoRepository aplicativoRepository;
 
+    @Autowired
     public CriarAssinaturaUseCase(AssinaturaRepository assinaturaRepository, ClienteRepository clienteRepository, AplicativoRepository aplicativoRepository) {
         this.assinaturaRepository = assinaturaRepository;
         this.clienteRepository = clienteRepository;

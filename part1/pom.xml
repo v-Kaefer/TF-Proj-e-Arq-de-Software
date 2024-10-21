@@ -6,7 +6,7 @@
     <groupId>progarqsoft.tfinal</groupId>
     <artifactId>part1</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <packaging>jar</packaging>
     <name>part1</name>
     <description>Projeto teste p/ trabalho final 1 de Projeto e Arquitetura de Software</description>
 
