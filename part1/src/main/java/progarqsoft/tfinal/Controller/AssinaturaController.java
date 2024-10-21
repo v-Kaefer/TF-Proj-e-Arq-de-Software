@@ -21,4 +21,9 @@ public class AssinaturaController {
         Assinatura assinatura = criarAssinaturaUseCase.execute(request.getClienteId(), request.getAplicativoId());
         return ResponseEntity.ok(assinatura);
     }
+
+    public CriarAssinaturaUseCase getCriarAssinaturaUseCase() {
+        return criarAssinaturaUseCase;
+    }
+
 }
