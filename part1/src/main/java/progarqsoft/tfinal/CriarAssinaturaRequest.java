@@ -1,6 +1,7 @@
 package progarqsoft.tfinal;
 
 import progarqsoft.tfinal.model.Assinatura;
+import progarqsoft.tfinal.service.CriarAssinaturaUseCase;
 
 @RestController
 @RequestMapping("/api/assinaturas")

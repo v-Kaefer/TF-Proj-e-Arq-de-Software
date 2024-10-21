@@ -1,4 +1,4 @@
-package progarqsoft.tfinal;
+package progarqsoft.tfinal.service;
 
 import progarqsoft.tfinal.model.Aplicativo;
 import progarqsoft.tfinal.model.Assinatura;
