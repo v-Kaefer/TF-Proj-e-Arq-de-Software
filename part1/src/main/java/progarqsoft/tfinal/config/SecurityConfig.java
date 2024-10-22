@@ -1,10 +1,12 @@
 package progarqsoft.tfinal.config;
 
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.annotation.Order;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 
 @Configuration
+@Order(1) // Define a ordem de execução do filtro de segurança - Erro atual por execução simultânea
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Override
