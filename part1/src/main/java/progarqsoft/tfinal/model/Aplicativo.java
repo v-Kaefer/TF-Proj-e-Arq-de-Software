@@ -10,28 +10,34 @@ public class Aplicativo {
     private String nome;
     private Float custoMensal;
 
-    // Getters e Setters
-public Long getCodigo() {
-    return codigo;
-}
+    public Aplicativo() {}
 
-public void setCodigo(Long codigo) {
-    this.codigo = codigo;
-}
+    public Aplicativo(String nome, Float custoMensal) {
+        this.nome = nome;
+        this.custoMensal = custoMensal;
+    }
 
-public String getNome() {
-    return nome;
-}
+    public Long getCodigo() {
+        return codigo;
+    }
 
-public void setNome(String nome) {
-    this.nome = nome;
-}
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
+    }
 
-public Float getCustoMensal() {
-    return custoMensal;
-}
+    public String getNome() {
+        return nome;
+    }
 
-public void setCustoMensal(Float custoMensal) {
-    this.custoMensal = custoMensal;
-}
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Float getCustoMensal() {
+        return custoMensal;
+    }
+
+    public void setCustoMensal(Float custoMensal) {
+        this.custoMensal = custoMensal;
+    }
 }

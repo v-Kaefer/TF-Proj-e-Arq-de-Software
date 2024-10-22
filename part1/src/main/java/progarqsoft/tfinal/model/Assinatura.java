@@ -20,44 +20,53 @@ public class Assinatura {
     private LocalDate inicioVigencia;
     private LocalDate fimVigencia;
 
-    // Getters e Setters
-public Long getCodigo() {
-    return codigo;
-}
+    public Assinatura() {}
 
-public void setCodigo(Long codigo) {
-    this.codigo = codigo;
-}
+    public Assinatura(Cliente cliente, Aplicativo aplicativo, LocalDate inicioVigencia, LocalDate fimVigencia) {
+        this.cliente = cliente;
+        this.aplicativo = aplicativo;
+        this.inicioVigencia = inicioVigencia;
+        this.fimVigencia = fimVigencia;
+    }
 
-public Aplicativo getAplicativo() {
-    return aplicativo;
-}
 
-public void setAplicativo(Aplicativo aplicativo) {
-    this.aplicativo = aplicativo;
-}
+    public Long getCodigo() {
+        return codigo;
+    }
 
-public Cliente getCliente() {
-    return cliente;
-}
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
+    }
 
-public void setCliente(Cliente cliente) {
-    this.cliente = cliente;
-}
+    public Aplicativo getAplicativo() {
+        return aplicativo;
+    }
 
-public LocalDate getInicioVigencia() {
-    return inicioVigencia;
-}
+    public void setAplicativo(Aplicativo aplicativo) {
+        this.aplicativo = aplicativo;
+    }
 
-public void setInicioVigencia(LocalDate inicioVigencia) {
-    this.inicioVigencia = inicioVigencia;
-}
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-public LocalDate getFimVigencia() {
-    return fimVigencia;
-}
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-public void setFimVigencia(LocalDate fimVigencia) {
-    this.fimVigencia = fimVigencia;
-}
+    public LocalDate getInicioVigencia() {
+        return inicioVigencia;
+    }
+
+    public void setInicioVigencia(LocalDate inicioVigencia) {
+        this.inicioVigencia = inicioVigencia;
+    }
+
+    public LocalDate getFimVigencia() {
+        return fimVigencia;
+    }
+
+    public void setFimVigencia(LocalDate fimVigencia) {
+        this.fimVigencia = fimVigencia;
+    }
 }
