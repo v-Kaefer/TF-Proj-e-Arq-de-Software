@@ -44,11 +44,11 @@ public class DatabaseInitializer implements CommandLineRunner {
 
         if (aplicativoRepository.count() == 0) {
             List<Aplicativo> aplicativos = List.of(
-                new Aplicativo("App 1", 10.0f),
-                new Aplicativo("App 2", 20.0f),
-                new Aplicativo("App 3", 30.0f),
-                new Aplicativo("App 4", 40.0f),
-                new Aplicativo("App 5", 50.0f)
+                new Aplicativo("App 1", 5.5f),
+                new Aplicativo("App 2", 10.0f),
+                new Aplicativo("App 3", 12.0f),
+                new Aplicativo("App 4", 15.0f),
+                new Aplicativo("App 5", 20.0f)
             );
             aplicativoRepository.saveAll(aplicativos);
         }

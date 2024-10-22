@@ -1,6 +1,7 @@
 package progarqsoft.tfinal.service;
 
 import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import progarqsoft.tfinal.model.Assinatura;
@@ -39,16 +40,19 @@ public class ProcessarPagamentoUseCase {
         LocalDate dataAtual = LocalDate.now();
         LocalDate fimVigenciaAtual = assinatura.getFimVigencia();
 
-        if (promocao.equals("ANUAL_40")) {
+        boolean isNovoCliente = pagamentoRepository.findByAssinaturaClienteCodigo(assinatura.getCliente().getCodigo()).isEmpty();
+        long mesesDeAssinatura = ChronoUnit.MONTHS.between(assinatura.getInicioVigencia(), dataAtual);
+
+        if (promocao != null && promocao.equals("ANUAL_40") && mesesDeAssinatura <= 3) {
             return fimVigenciaAtual.isBefore(dataAtual) ? dataAtual.plusDays(365) : fimVigenciaAtual.plusDays(365);
-        } else if (promocao.equals("PAGUE_30_GANHE_45")) {
+        } else if (promocao != null && promocao.equals("PAGUE_30_GANHE_45") && isNovoCliente) {
             return fimVigenciaAtual.isBefore(dataAtual) ? dataAtual.plusDays(45) : fimVigenciaAtual.plusDays(45);
         } else if (valorPago.equals(assinatura.getAplicativo().getCustoMensal())) {
             return fimVigenciaAtual.isBefore(dataAtual) ? dataAtual.plusDays(30) : fimVigenciaAtual.plusDays(30);
+        } else if (valorPago.equals(80.0f)) {
+            return fimVigenciaAtual.isBefore(dataAtual) ? dataAtual.plusDays(365) : fimVigenciaAtual.plusDays(365);
         } else {
             throw new IllegalArgumentException("Valor do pagamento incorreto ou promoção inválida");
         }
-    }
-
-    
+    }    
 }
