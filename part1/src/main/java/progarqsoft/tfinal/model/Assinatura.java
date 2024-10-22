@@ -1,7 +1,13 @@
 package progarqsoft.tfinal.model;
 
 import java.time.LocalDate;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Assinatura {
@@ -20,44 +26,43 @@ public class Assinatura {
     private LocalDate inicioVigencia;
     private LocalDate fimVigencia;
 
-    // Getters e Setters
-public Long getCodigo() {
-    return codigo;
-}
+    public Long getCodigo() {
+        return codigo;
+    }
 
-public void setCodigo(Long codigo) {
-    this.codigo = codigo;
-}
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
+    }
 
-public Aplicativo getAplicativo() {
-    return aplicativo;
-}
+    public Aplicativo getAplicativo() {
+        return aplicativo;
+    }
 
-public void setAplicativo(Aplicativo aplicativo) {
-    this.aplicativo = aplicativo;
-}
+    public void setAplicativo(Aplicativo aplicativo) {
+        this.aplicativo = aplicativo;
+    }
 
-public Cliente getCliente() {
-    return cliente;
-}
+    public Cliente getCliente() {
+        return cliente;
+    }
 
-public void setCliente(Cliente cliente) {
-    this.cliente = cliente;
-}
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
 
-public LocalDate getInicioVigencia() {
-    return inicioVigencia;
-}
+    public LocalDate getInicioVigencia() {
+        return inicioVigencia;
+    }
 
-public void setInicioVigencia(LocalDate inicioVigencia) {
-    this.inicioVigencia = inicioVigencia;
-}
+    public void setInicioVigencia(LocalDate inicioVigencia) {
+        this.inicioVigencia = inicioVigencia;
+    }
 
-public LocalDate getFimVigencia() {
-    return fimVigencia;
-}
+    public LocalDate getFimVigencia() {
+        return fimVigencia;
+    }
 
-public void setFimVigencia(LocalDate fimVigencia) {
-    this.fimVigencia = fimVigencia;
-}
+    public void setFimVigencia(LocalDate fimVigencia) {
+        this.fimVigencia = fimVigencia;
+    }
 }

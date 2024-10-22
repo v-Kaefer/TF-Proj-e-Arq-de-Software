@@ -1,7 +1,13 @@
 package progarqsoft.tfinal.model;
 
 import java.time.LocalDate;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Pagamento {
@@ -17,44 +23,43 @@ public class Pagamento {
     private LocalDate dataPagamento;
     private String promocao;
 
-    // Getters e Setters
-public Long getCodigo() {
-    return codigo;
-}
+    public Long getCodigo() {
+        return codigo;
+    }
 
-public void setCodigo(Long codigo) {
-    this.codigo = codigo;
-}
+    public void setCodigo(Long codigo) {
+        this.codigo = codigo;
+    }
 
-public Assinatura getAssinatura() {
-    return assinatura;
-}
+    public Assinatura getAssinatura() {
+        return assinatura;
+    }
 
-public void setAssinatura(Assinatura assinatura) {
-    this.assinatura = assinatura;
-}
+    public void setAssinatura(Assinatura assinatura) {
+        this.assinatura = assinatura;
+    }
 
-public Float getValorPago() {
-    return valorPago;
-}
+    public Float getValorPago() {
+        return valorPago;
+    }
 
-public void setValorPago(Float valorPago) {
-    this.valorPago = valorPago;
-}
+    public void setValorPago(Float valorPago) {
+        this.valorPago = valorPago;
+    }
 
-public LocalDate getDataPagamento() {
-    return dataPagamento;
-}
+    public LocalDate getDataPagamento() {
+        return dataPagamento;
+    }
 
-public void setDataPagamento(LocalDate dataPagamento) {
-    this.dataPagamento = dataPagamento;
-}
+    public void setDataPagamento(LocalDate dataPagamento) {
+        this.dataPagamento = dataPagamento;
+    }
 
-public String getPromocao() {
-    return promocao;
-}
+    public String getPromocao() {
+        return promocao;
+    }
 
-public void setPromocao(String promocao) {
-    this.promocao = promocao;
-}
+    public void setPromocao(String promocao) {
+        this.promocao = promocao;
+    }
 }
