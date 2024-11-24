@@ -16,7 +16,11 @@ spring:
           uri: lb://currency-conversion 
           predicates: 
             - Path=/convert/** 
-          filters: 
+          filters:
+            - name: CircuitBreaker
+              args:
+                name: currencyConversionCircuitBreaker
+                fallbackUri: forward:/fallback/currency-conversion
             - RewritePath=/convert/(?<resto>.*), /currency-conversion-feign/${resto} 
         - id: currency-exchange 
           uri: lb://currency-exchange 
@@ -40,3 +44,18 @@ management:
       show-details: always 
     gateway: 
       enabled: true
+    circuitbreakers:
+      enabled: true
+
+resilience4j:
+  circuitbreaker:
+    configs:
+      default:
+        register-health-indicator: true
+        sliding-window-type: count-based
+        sliding-window-size: 10
+        failure-rate-threshold: 50
+        minimum-number-of-calls: 5
+        automatic-transition-from-open-to-half-open-enabled: true
+        wait-duration-in-open-state: 5s
+        permitted-number-of-calls-in-half-open-state: 3

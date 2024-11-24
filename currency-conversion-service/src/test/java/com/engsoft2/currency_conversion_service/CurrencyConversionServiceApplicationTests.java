@@ -1,4 +1,4 @@
-package com.engsoft2.ccurrency_conversion_service;
+package com.engsoft2.currency_conversion_service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
