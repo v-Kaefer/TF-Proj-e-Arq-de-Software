@@ -1,6 +1,9 @@
 package progarqsoft.tfinal.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Aplicativo {
@@ -9,13 +12,6 @@ public class Aplicativo {
     private Long codigo;
     private String nome;
     private Float custoMensal;
-
-    public Aplicativo() {}
-
-    public Aplicativo(String nome, Float custoMensal) {
-        this.nome = nome;
-        this.custoMensal = custoMensal;
-    }
 
     public Long getCodigo() {
         return codigo;

@@ -1,6 +1,7 @@
 package progarqsoft.tfinal.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Usuario {
@@ -8,20 +9,19 @@ public class Usuario {
     private String usuario;
     private String senha;
 
-    // Getters e Setters
-public String getUsuario() {
-    return usuario;
-}
+    public String getUsuario() {
+        return usuario;
+    }
 
-public void setUsuario(String usuario) {
-    this.usuario = usuario;
-}
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
 
-public String getSenha() {
-    return senha;
-}
+    public String getSenha() {
+        return senha;
+    }
 
-public void setSenha(String senha) {
-    this.senha = senha;
-}
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
 }

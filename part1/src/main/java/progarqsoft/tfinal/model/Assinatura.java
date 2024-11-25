@@ -1,7 +1,13 @@
 package progarqsoft.tfinal.model;
 
 import java.time.LocalDate;
-import javax.persistence.*;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Assinatura {
@@ -19,16 +25,6 @@ public class Assinatura {
 
     private LocalDate inicioVigencia;
     private LocalDate fimVigencia;
-
-    public Assinatura() {}
-
-    public Assinatura(Cliente cliente, Aplicativo aplicativo, LocalDate inicioVigencia, LocalDate fimVigencia) {
-        this.cliente = cliente;
-        this.aplicativo = aplicativo;
-        this.inicioVigencia = inicioVigencia;
-        this.fimVigencia = fimVigencia;
-    }
-
 
     public Long getCodigo() {
         return codigo;

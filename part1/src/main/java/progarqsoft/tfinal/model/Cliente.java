@@ -1,6 +1,9 @@
 package progarqsoft.tfinal.model;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Cliente {
@@ -9,14 +12,6 @@ public class Cliente {
     private Long codigo;
     private String nome;
     private String email;
-
-    public Cliente() {}
-
-    public Cliente(String nome, String email) {
-        this.nome = nome;
-        this.email = email;
-    }
-
 
     public Long getCodigo() {
         return codigo;
