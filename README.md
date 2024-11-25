@@ -29,5 +29,10 @@ http://localhost:8200/consultas
 http://localhost:8000/actuator/health
 
 
+## Logs (Docker)
+docker logs 8d6e929ee397 {nameserver}
+docker logs afd47b8ac76b {gateway}
+docker logs fa7bcc55a0b2 {currency-exchange}
+
 #### Remove imagens inutilizadas
 docker rmi $(docker images --filter "dangling=true" -q --no-trunc)
