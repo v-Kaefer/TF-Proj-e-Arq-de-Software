@@ -6,3 +6,6 @@
 
 - Utilizar `@ActiveProfiles("test")`, para identificar como perfil de teste.
     - Então, preciso configurar um `application-test.properties`, que vai indicar o db separado, para testes. [Considerar teste - perguntar para o professor].
+
+
+- É possível acessar o Swagger UI, em `http://localhost:8080/swagger-ui.html`, após configurar.
