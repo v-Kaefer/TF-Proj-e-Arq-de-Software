@@ -1,4 +1,4 @@
-package main.java.com.engsoft2.api_gateway;
+package com.engsoft2.api_gateway;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

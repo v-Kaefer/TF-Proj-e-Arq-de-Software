@@ -9,10 +9,12 @@ COPY .mvn .mvn
 COPY pom.xml .
 # permissão de execução para o arquivo mvnw
 RUN chmod +x mvnw
+
 #fazer download de todas dependências sem gerar o JAR final 
 RUN ./mvnw dependency:go-offline
 #copiar os arquivos-fonte 
 COPY src src
+
 #realizar o build da aplicação sem executar os testes
 RUN ./mvnw clean install -DskipTests
 
@@ -23,6 +25,6 @@ WORKDIR /workspace/app
 #copiar os arquivos para execução no conteiner
 COPY --from=build /workspace/app/target/*.jar /workspace/app/app.jar
 #expor a porta utilizada na aplicação
-EXPOSE 8000
+EXPOSE 8120
 #executar o JAR
 ENTRYPOINT ["java", "-jar", "/workspace/app/app.jar"]

@@ -13,7 +13,6 @@ RUN chmod +x mvnw
 RUN ./mvnw dependency:go-offline
 #copiar os arquivos-fonte 
 COPY src src
-
 #realizar o build da aplicação sem executar os testes
 RUN ./mvnw clean install -DskipTests
 
