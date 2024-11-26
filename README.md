@@ -8,8 +8,6 @@
     - Então, preciso configurar um `application-test.properties`, que vai indicar o db separado, para testes. [Considerar teste - perguntar para o professor].
 
 
-
-
 # Apresentação T.F. Parte 2
 
 
