@@ -1,4 +1,4 @@
-package progarqsoft.tfinal.service;
+package com.tfp1.service;
 
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
@@ -7,10 +7,11 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import progarqsoft.tfinal.model.Assinatura;
-import progarqsoft.tfinal.model.Pagamento;
-import progarqsoft.tfinal.repository.AssinaturaRepository;
-import progarqsoft.tfinal.repository.PagamentoRepository;
+import com.tfp1.model.Assinatura;
+import com.tfp1.model.Pagamento;
+import com.tfp1.repository.AssinaturaRepository;
+import com.tfp1.repository.PagamentoRepository;
+
 
 @Service
 public class ProcessarPagamentoUseCase {

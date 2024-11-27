@@ -1,16 +1,18 @@
-package progarqsoft.tfinal.config;
+package com.tfp1.config;
 
 import java.time.LocalDate;
 import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
-import progarqsoft.tfinal.model.Aplicativo;
-import progarqsoft.tfinal.model.Assinatura;
-import progarqsoft.tfinal.model.Cliente;
-import progarqsoft.tfinal.repository.AplicativoRepository;
-import progarqsoft.tfinal.repository.AssinaturaRepository;
-import progarqsoft.tfinal.repository.ClienteRepository;
+
+import com.tfp1.model.Aplicativo;
+import com.tfp1.model.Assinatura;
+import com.tfp1.model.Cliente;
+import com.tfp1.repository.AplicativoRepository;
+import com.tfp1.repository.AssinaturaRepository;
+import com.tfp1.repository.ClienteRepository;
 
 @Configuration
 public class DatabaseInitializer implements CommandLineRunner {

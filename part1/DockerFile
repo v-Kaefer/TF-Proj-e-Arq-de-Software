@@ -1,5 +1,0 @@
-# Dockerfile para serviço part1
-FROM openjdk:21-jdk-alpine
-VOLUME /tmp
-COPY target/part1-*.jar app.jar
-ENTRYPOINT ["java", "-jar", "/app.jar"]

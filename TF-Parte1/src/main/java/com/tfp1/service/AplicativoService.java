@@ -1,12 +1,14 @@
-package com.engsoft2.projeto.service;
+package main.java.com.tfp1.service;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.engsoft2.projeto.model.Aplicativo;
-import com.engsoft2.projeto.repository.AplicativoRepository;
-import com.engsoft2.projeto.exception.ResourceNotFoundException;
 
-import java.util.List;
+import com.tfp1.model.Aplicativo;
+import com.tfp1.repository.AplicativoRepository;
+
+import main.java.com.tfp1.exception.ResourceNotFoundException;
 
 @Service
 public class AplicativoService {

@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.tfp1.model.Assinatura;
 import com.tfp1.repository.AssinaturaRepository;
-import com.tfp1.model.Cliente;
 
 import java.time.LocalDate;
 import java.util.List;

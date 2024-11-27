@@ -1,12 +1,14 @@
-package com.engsoft2.projeto.service;
+package main.java.com.tfp1.service;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import com.engsoft2.projeto.model.Pagamento;
-import com.engsoft2.projeto.repository.PagamentoRepository;
-import com.engsoft2.projeto.exception.ResourceNotFoundException;
 
-import java.util.List;
+import com.tfp1.model.Pagamento;
+import com.tfp1.repository.PagamentoRepository;
+
+import main.java.com.tfp1.exception.ResourceNotFoundException;
 
 @Service
 public class PagamentoService {
@@ -33,8 +35,8 @@ public class PagamentoService {
 
     public Pagamento atualizar(Long id, Pagamento pagamento) {
         Pagamento pagamentoExistente = buscarPorId(id);
-        pagamentoExistente.setValor(pagamento.getValor());
-        pagamentoExistente.setData(pagamento.getData());
+        pagamentoExistente.setValorPago(pagamento.getValorPago());
+        pagamentoExistente.setDataPagamento(pagamento.getDataPagamento());
         pagamentoExistente.setAssinatura(pagamento.getAssinatura());
         return pagamentoRepository.save(pagamentoExistente);
     }

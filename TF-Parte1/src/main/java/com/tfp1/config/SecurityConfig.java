@@ -1,4 +1,4 @@
-package progarqsoft.tfinal.config;
+package com.tfp1.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;

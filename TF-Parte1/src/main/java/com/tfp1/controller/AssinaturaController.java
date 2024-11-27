@@ -1,10 +1,18 @@
-package progarqsoft.tfinal.controller;
+package com.tfp1.controller;
+
+import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-import progarqsoft.tfinal.model.Assinatura;
-import progarqsoft.tfinal.service.AssinaturaService;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tfp1.model.Assinatura;
+import com.tfp1.service.AssinaturaService;
 
 @RestController
 @RequestMapping("/api/assinaturas")
